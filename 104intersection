@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+import math
+import sys
+import sphere
+import cylinder
+import cone
+
+flag = int(sys.argv[1])
+xp = int(sys.argv[2])
+yp = int(sys.argv[3])
+zp = int(sys.argv[4])
+xv = int(sys.argv[5])
+yv = int(sys.argv[6])
+zv = int(sys.argv[7])
+p = int(sys.argv[8])
+point = [xp, yp, zp]
+vector = [xv, yv, zv]
+if (flag == 1):
+    sphere.sphere(point, vector, p)
+elif (flag == 2):
+    cylinder.cylinder(point, vector, p)
+elif (flag == 3):
+    cone.cone(point, vector, p)
+else:
+    exit(0)
+
